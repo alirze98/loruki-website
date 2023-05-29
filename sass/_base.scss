@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+//--------------MEDIAQUERY---------------
+@mixin respond ($breakpoint) {
+
+  @if $breakpoint == phone {
+    @media only screen and (max-width:37.5em) { //600px
+      @content
+    }
+  }
+
+  @if $breakpoint==tab-land {
+    @media only screen and (max-width:48em) { 
+      @content
+    }
+  }
+
+  @if $breakpoint==tab-port {
+    @media only screen and (max-width:75em) { 
+      @content
+    }
+  }
+
+  @if $breakpoint==bg-desktop {
+    @media only screen and (min-width:112.5em) {
+      @content
+    }
+  }
+
+}
+
+//--------------UTILITIES&VARIABLES---------------
+
+$color-primary: #047aed;
+$color-secondary:#1c3fa8; 
+$color-primary-dark:#002240;
+$color-grey-light:#f4f4f4;
+$color-success:#5cb85c;
+$color-error:#d9534f;
+
+.container {
+max-width: 110rem;
+margin: 0 auto;
+padding: 0 4rem;
+
+
+@include respond(phone) {
+  padding: 0 1rem;
+  }
+}
+
+.mb-sm {
+  margin-bottom: 2rem !important;
+}
+
+.mb-md {
+  margin-bottom: 3rem !important;
+}
+
+.mb-lg {
+  margin-bottom: 5rem !important;
+}
+
+.center-text {
+  text-align: center !important;
+}
+
+//--------------ANIMATIONS---------------
+@keyframes moveInRight  {
+  0%{
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInLeft  {
+  0%{
+    transform: translateX(100%) translateY(20%);
+  }
+
+  100% {
+    transform: translateX(0) translateY(20%);
+  }
+}
+
+@keyframes moveInTop  {
+  0%{
+    transform:translateY(100%);
+  }
+
+  100% {
+    transform:translateY(0);
+  }
+}
+
+@keyframes moveInTopForm {
+  0%{
+    transform:translateY(100%);
+  }
+
+  100% {
+    transform:translateY(20%);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    transform: translateY(-100%);
+  }
+  
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+
+//--------------GENERAL---------------
+*,*::after,*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+  overflow-x: hidden;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  // @include respond(phone) {
+  //   font-size: 43.75%;
+  // }
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  overflow-x: hidden;
+}
+
+h1,h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 1rem 0;
+}
+
+
+
+
+

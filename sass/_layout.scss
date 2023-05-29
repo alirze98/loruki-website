@@ -1,0 +1,215 @@
+.header {
+  background-color: $color-primary;
+  color: #fff;
+  height: 7rem;
+
+  @include respond(phone) {
+    height: 10rem;
+
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+    
+  }
+
+  &__logo {
+    font-size: 3.2rem;  
+    font-weight: 300;
+    padding: 1rem;
+    margin: 0 .5rem;
+    line-height: 1.2;
+
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+
+    @include respond(phone) {
+      background-color: rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+    }
+
+  }
+
+  &__link {
+    &:link,&:visited {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.6rem;
+    }
+
+    &:hover,&:active {
+      border-bottom: 2px solid #fff;
+    }
+  }
+
+  a {
+    padding: 10px;
+    margin: 0 5px;
+  }
+  
+}
+
+.section-showcase {
+  background-color: $color-primary;
+  position: relative;
+  padding-bottom: 3.8rem;
+
+  @include respond(tab-land) {
+   padding-bottom: 2rem;
+  }
+
+  @include respond(phone) {
+   padding-bottom: 1rem;
+
+  }
+
+  &::after {
+   content:"";
+   position: absolute;
+   width: 100%;
+   height: 10rem;
+   bottom: -70px;
+   background-color: rgb(255, 255, 255);
+   transform: skewY(-3deg);
+
+
+  }
+}
+
+.section-stats {
+  margin-top: 10rem;
+  padding-bottom: 5rem;
+  animation: moveInTop 1s ease-in .2s backwards;
+}
+
+.section-install {
+ padding: 1rem 0 3rem 0;
+}
+
+.section-cloud {
+  padding: 2rem 0;
+  background-color: $color-primary;
+}
+
+.section-languages {
+  padding: 2rem 0 4rem 0;
+}
+
+.footer {
+  background-color: $color-primary-dark;
+  color: #fff;
+  padding: 7rem 0;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    align-items: center;
+    grid-column-gap: 2rem;
+    grid-row-gap: 4rem;
+    
+    
+    @include respond(phone) {
+      justify-items: center;
+    }
+    
+  }
+
+  &__heading {
+    font-size: 3.2rem;
+    margin-top: 0;
+  }
+
+  &__copyright {
+    @include respond(phone) {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+
+  &__copyright-text {
+    font-size: 1.6rem;
+  }
+
+  &__list {
+    list-style: none;
+
+    @include respond(phone) {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.6rem;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 2.5rem;
+    align-self: center;
+
+    
+  }
+
+  &__social-icon {
+    color: #fff;
+    font-size: 3.2rem;
+
+    &--1 {
+      &:hover {
+        color: #000;
+      }
+    }
+
+    &--2 {
+      &:hover {
+        color: #1773EA;
+      }
+    }
+
+    &--3 {
+      &:hover {
+        color: #f154bd;
+      }
+    }
+
+    &--4 {
+      &:hover {
+        color: #1C9CEA;
+      }
+    }
+
+  }
+ 
+}
+
+.section-features {
+  background-color: $color-primary;
+  padding: 3.2rem 0;
+}
+
+.section-features-sub {
+  background-color:$color-grey-light ;
+  padding: 3.2rem 0;
+}
+
+.section-features-main {
+  padding: 5rem 0;
+}
+
+.section-docs-main {
+  padding: 5rem 0;
+}
